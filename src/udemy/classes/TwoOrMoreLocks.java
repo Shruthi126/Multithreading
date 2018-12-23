@@ -58,8 +58,10 @@ public class TwoOrMoreLocks {
 		long start = System.currentTimeMillis();
 		
 		Thread t1= new Thread(new Runnable(){
+			
 			@Override
 			public void run() {
+				System.out.println(start);
 				process();
 			}
 			

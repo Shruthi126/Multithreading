@@ -64,9 +64,6 @@ class Processor4{
 				list.add(value);
 				this.notify();
 				System.out.println("Added Item  is :"+ value++);	
-				
-				
-				
 			}
 		}
 		

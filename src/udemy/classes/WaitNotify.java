@@ -62,7 +62,7 @@ class Processor3{
 	//Put debug points everywhere in both producer and consumer class. You will understand the flow
 	public  void consumer() throws InterruptedException{
 		synchronized (this) {
-			Thread.sleep(10000);//This is to make sure produce is kick started before
+			Thread.sleep(1000);//This is to make sure produce is kick started before
 			System.out.println("Done the required job :"+Calendar.getInstance().getTime());
 			notify();
 			System.out.println("Lock is not yet given up. Just notified. Let me complete the method "+Calendar.getInstance().getTime());

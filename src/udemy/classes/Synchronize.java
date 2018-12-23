@@ -14,7 +14,7 @@ public class Synchronize {
 	
 	public static void doWork(){
 		
-		Thread t1= new Thread(new Runnable(){
+	 Thread t1= new Thread(new Runnable(){
 
 			@Override
 			public void run() {

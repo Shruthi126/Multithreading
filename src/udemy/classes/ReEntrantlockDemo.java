@@ -89,7 +89,7 @@ class  Runner6 {
 			condition.signal();
 		}
 		finally{
-			//unlocking should always happen in finally coz if exceptions are there then it won tbe unlocked at all
+			//unlocking should always happen in finally coz if exceptions are there then it wont be unlocked at all
 			lock.unlock();
 		}
 	}

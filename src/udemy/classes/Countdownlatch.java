@@ -4,12 +4,12 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-
+//It is mainly thread safe and it should be sent to task during construction
 public class Countdownlatch {
 	
 
 	public static void main(String args[]){
-		CountDownLatch cdl= new CountDownLatch(8);
+		CountDownLatch cdl= new CountDownLatch(10);
 		ExecutorService exService=Executors.newFixedThreadPool(3);
 
 		for(int i=0;i<10;i++){
@@ -25,11 +25,12 @@ public class Countdownlatch {
 }
 
 class Processor2 implements Runnable{
-	private int id;
+	private static int id;
 	private CountDownLatch latch;
 	
 	public Processor2 (CountDownLatch latch){
 		this.latch=latch;
+		
 	}
 	public Processor2 (){}
 
